@@ -12,5 +12,5 @@ Repetier Server from [repetier-server.com](https://www.repetier-server.com/downl
 
 ```bash
 docker volume create repetier-data
-docker run -it --rm -p 3344:3344 -v repetier-data:/data --device=/dev/ttyUSB0 yadomi/repetier-server
+docker run -it -p 3344:3344 -v repetier-data:/data --device=/dev/ttyUSB0 --name repetier-server yadomi/repetier-server
 ```
