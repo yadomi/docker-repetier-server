@@ -1,9 +1,11 @@
 FROM debian:buster-slim
 
-LABEL maintainer="felix.yadomi@gmail.com"
-LABEL version="v0.94.1"
+ARG VERSION="0.94.3"
 
-ADD http://download.repetier.com/files/server/debian-amd64/Repetier-Server-0.94.1-Linux.deb repetier-server.deb
+LABEL maintainer="felix.yadomi@gmail.com"
+LABEL version="v${VERSION}"
+
+ADD http://download.repetier.com/files/server/debian-amd64/Repetier-Server-${VERSION}-Linux.deb repetier-server.deb
 
 RUN dpkg --unpack repetier-server.deb \
     && rm -rf repetier-server.deb \
@@ -12,6 +14,6 @@ RUN dpkg --unpack repetier-server.deb \
 RUN mkdir -p /data \
     && sed -i "s/var\/lib\/Repetier-Server/data/g" /usr/local/Repetier-Server/etc/RepetierServer.xml
 
-EXPOSE 3344    
+EXPOSE 3344
 
 CMD [ "/usr/local/Repetier-Server/bin/RepetierServer", "-c", "/usr/local/Repetier-Server/etc/RepetierServer.xml" ]
