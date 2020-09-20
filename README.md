@@ -2,6 +2,8 @@
 
 Repetier Server from [repetier-server.com](https://www.repetier-server.com/download-repetier-server/) in a Docker based on Debian.
 
+Latest image version is Repetier Server `v0.94.3` ([Changelog](https://download3.repetier.com/files/server/changelog.txt))
+
 ## Summary
 
 - Peristant data are located in `/data`. You can either use a bind-mount or create a volume.
