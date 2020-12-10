@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  server:
+    build: .
+    container_name: "repetier-server"
+    ports: 
+      - 3344:3344
+    volumes: 
+      - /home/$USER/docker/docker-repetier-server/repertier_server_data:/data
+    devices:
+      - "/dev/ttyUSB0:/dev/ttyUSB0"
+
+ 
