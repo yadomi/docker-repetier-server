@@ -1,16 +1,17 @@
 FROM debian:buster-slim
 
-ARG VERSION="0.94.3"
+ARG VERSION="1.0.2"
 
 LABEL maintainer="felix.yadomi@gmail.com"
 LABEL version="v${VERSION}"
 
 ADD http://download.repetier.com/files/server/debian-amd64/Repetier-Server-${VERSION}-Linux.deb repetier-server.deb
 
+# Install with dpkg and remove the deb after
 RUN dpkg --unpack repetier-server.deb \
-    && rm -rf repetier-server.deb \
-    && rm -f /var/lib/dpkg/info/repetier-server.postinst
+    && rm -rf repetier-server.deb
 
+# Create data directory at root and update configuration storage location with this path
 RUN mkdir -p /data \
     && sed -i "s/var\/lib\/Repetier-Server/data/g" /usr/local/Repetier-Server/etc/RepetierServer.xml
 
