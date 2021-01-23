@@ -1,5 +1,7 @@
 # docker-repetier-server
 
+![Docker Image CI](https://github.com/smartsirius/docker-repetier-server/workflows/Docker%20Image%20CI/badge.svg)
+
 Repetier Server from [repetier-server.com](https://www.repetier-server.com/download-repetier-server/) in a Docker based on Debian.
 
 Latest version of Repetier Server Docker image is `v1.0.3` ([Changelog](https://download3.repetier.com/files/server/changelog.txt))
