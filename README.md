@@ -23,18 +23,12 @@ docker run -it -p 3344:3344 -v repetier-data:/data --device=/dev/ttyUSB0 --name 
 
 ### With docker-compose
 
-```yaml
-version: "3.8"
-services:
-    repetier:
-        image: yadomi/repetier-server:latest
-        volumes:
-            - repetier-data:/data
-        ports:
-            - 3344:3344
-        devices:
-            - "/dev/ttyUSB0"
+Start contaienr
+```bash
+docker-compose up -d
+```
 
-volumes:
-    repetier-data:
+Stop container
+```bash
+docker-compose down
 ```
