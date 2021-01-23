@@ -1,8 +1,8 @@
 FROM debian:buster-slim
 
-ARG VERSION="1.0.2"
+ARG VERSION="1.0.3"
 
-LABEL maintainer="felix.yadomi@gmail.com"
+LABEL maintainer="smartsirius@smartsirius.de"
 LABEL version="v${VERSION}"
 
 ADD http://download.repetier.com/files/server/debian-amd64/Repetier-Server-${VERSION}-Linux.deb repetier-server.deb
