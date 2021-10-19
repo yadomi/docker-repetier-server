@@ -38,3 +38,10 @@ jobs:
         with:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
+
+      - name: Docker Hub Description
+        uses: peter-evans/dockerhub-description@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          repository: yadomi/repetier-server
