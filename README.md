@@ -1,11 +1,13 @@
 # docker-repetier-server
 
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/yadomi/docker-repetier-server/ci/master)](https://github.com/yadomi/docker-repetier-server/actions/workflows/build-and-push-dockerhub.yml)
-[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/yadomi/repetier-server)](https://hub.docker.com/r/yadomi/repetier-server/tags?page=1&ordering=name)
+[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/yadomi/repetier-server?sort=semver)](https://hub.docker.com/r/yadomi/repetier-server/tags?page=1&ordering=name)
 
 Repetier Server from [repetier-server.com](https://www.repetier-server.com/download-repetier-server/) in a Docker based on Debian.
 
-Latest version of Repetier Server Docker image is `v1.4.1` ([Changelog](https://download3.repetier.com/files/server/changelog.txt))
+Latest version of Repetier Server in this docker image is ![Docker Image Version (latest semver)](https://img.shields.io/docker/v/yadomi/repetier-server?label=%20&sort=semver)
+
+[See Repetier Changelog](https://download3.repetier.com/files/server/changelog.txt)
 
 ## Summary
 
