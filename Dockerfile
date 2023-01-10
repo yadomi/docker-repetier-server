@@ -1,6 +1,6 @@
 FROM debian:buster-slim
 
-ARG VERSION="1.4.4"
+ARG VERSION="1.4.6"
 
 LABEL maintainer="felix.yadomi@gmail.com"
 LABEL version="v${VERSION}"
