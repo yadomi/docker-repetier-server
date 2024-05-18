@@ -1,6 +1,6 @@
 FROM debian:bullseye-slim
 
-ARG VERSION="1.4.15"
+ARG VERSION="1.4.17"
 
 LABEL maintainer="felix.yadomi@gmail.com"
 LABEL version="v${VERSION}"
